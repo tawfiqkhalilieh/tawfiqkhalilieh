@@ -22,26 +22,29 @@ graph TB
     C[Technologies]
     C1[Backend]
     C1a[FastAPI, Flask]
-    C1b[Express.js, Node.js]
+    C1b[Express.js, Fastify.js, Node.js]
     C1c[Goroutines, Gin]
 
     C2[Frontend]
     C2a[React, HTMX, Tailwind]
-    C2b[Electron.js]
+    C2b[Next.js, Electron.js]
 
     C3[Databases]
     C3a[PostgreSQL, MySQL]
     C3b[MongoDB, Redis]
     C3c[Firebase, DynamoDB]
 
-    C4[AI/ML]
-    C4a[scikit-learn, TensorFlow]
-    C4b[Gemini API, OpenAI API]
-    C4c[Pandas, NumPy]
+    C4[DevOps & Tools]
+    C4a[Docker, Docker Compose]
+    C4b[GitHub Actions]
 
-    D[Automation]
-    D1[Docker, Docker Compose]
-    D2[GitHub Actions]
+    C5[AI/ML]
+    C5a[scikit-learn, TensorFlow]
+    C5b[Gemini API, OpenAI API]
+    C5c[Pandas, NumPy]
+
+    C6[Automation]
+    C6a[Selenium]
 
     %% Connections
     A --> A1 --> A2 --> A3
@@ -49,8 +52,9 @@ graph TB
     C --> C1 --> C1a --> C1b --> C1c
     C --> C2 --> C2a --> C2b
     C --> C3 --> C3a --> C3b --> C3c
-    C --> C4 --> C4a --> C4b --> C4c
-    C --> D --> D1 --> D2
+    C --> C4 --> C4a --> C4b
+    C --> C5 --> C5a --> C5b --> C5c
+    C --> C6 --> C6a
 
     %% 🎨 Styling
     classDef arch fill:#ffcc00,stroke:#333,stroke-width:2px,color:#000;
@@ -59,17 +63,19 @@ graph TB
     classDef backend fill:#ff9999,stroke:#333,stroke-width:1px,color:#000;
     classDef frontend fill:#ffccff,stroke:#333,stroke-width:1px,color:#000;
     classDef db fill:#ccccff,stroke:#333,stroke-width:1px,color:#000;
+    classDef devops fill:#ffd699,stroke:#333,stroke-width:1px,color:#000;
     classDef ai fill:#b3e6cc,stroke:#333,stroke-width:1px,color:#000;
     classDef automation fill:#ffb3e6,stroke:#333,stroke-width:1px,color:#000;
 
     class A,A1,A2,A3 arch;
     class B,B1,B2 data;
-    class C,C1,C2,C3,C4 tech;
+    class C,C1,C2,C3,C4,C5,C6 tech;
     class C1a,C1b,C1c backend;
     class C2a,C2b frontend;
     class C3a,C3b,C3c db;
-    class C4a,C4b,C4c ai;
-    class D,D1,D2 automation;
+    class C4a,C4b devops;
+    class C5a,C5b,C5c ai;
+    class C6a automation;
 ```
 
 ## 📫 How to Reach Me
